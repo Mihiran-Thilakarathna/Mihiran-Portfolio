@@ -161,7 +161,7 @@ export const projects: Project[] = [
     id: 2,
     title: 'AI Chat Assistant',
     date: 'October 2025',
-    description: 'A modern Android chat app powered by Google Gemini AI, featuring real-time conversations and synced chat history using Firebase Firestore. Built with Jetpack Compose, Material Design 3, and MVVM architecture.',
+    description: 'A modern Android chat app powered by Google Gemini AI, featuring real-time conversations and synced chat history using Firebase Firestore.',
     image: aiChatImage,
     categories: ['AI/ML', 'Mobile Application'],
     tags: ['Kotlin', 'Jetpack Compose', 'MVVM', 'Firebase Firestore', 'Google Gemini AI'],
