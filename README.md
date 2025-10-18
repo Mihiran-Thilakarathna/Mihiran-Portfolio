@@ -1,16 +1,28 @@
 # Mihiran Thilakarathna | Portfolio
 
-A React + TypeScript portfolio that highlights Mihiran Thilakarathna’s AI/ML and software-development work. The site ships with smooth animations, multiple themes, and a contact form so collaborators can reach out quickly.
+<div align="center">
 
-## ✨ Highlights
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-View_Site-2ea44f?style=for-the-badge)](https://mihiran-thilakarathna.github.io/Mihiran-Portfolio/)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
+[![React](https://img.shields.io/badge/React-19-61dafb?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178c6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-7-646cff?style=for-the-badge&logo=vite)](https://vitejs.dev/)
 
-- **Animated hero** section with typewriter headline and rotating avatar
-- **Theme switcher** offering default, light, and dark palettes
-- **Responsive layout** that scales gracefully from phones to desktops
-- **Scroll-aware navigation** with active link states
-- **Multi-category project filter** with polished cards and quick actions
-- **Contact hub** featuring direct messaging links and a validated form
-- **Centralized data layer** (`src/data/portfolio.ts`) for easy updates
+</div>
+
+---
+
+A modern, responsive portfolio showcasing AI/ML and software development projects. Built with React, TypeScript, and Vite, featuring smooth animations, theme switching, and an intuitive contact hub.
+
+## ✨ Features
+
+- � **Theme Switcher** — Default, light, and dark color palettes
+- 🎭 **Smooth Animations** — Framer Motion with typewriter effects
+- 📱 **Fully Responsive** — Seamless experience from mobile to desktop
+- 🧭 **Smart Navigation** — Scroll-aware active link states
+- 🗂️ **Multi-Category Projects** — Filter by AI/ML, Web, Mobile, Desktop
+- 💬 **Contact Hub** — Direct messaging via WhatsApp, Telegram, Discord, Email
+- ⚙️ **Centralized Data** — Easy content updates in `src/data/portfolio.ts`
 
 ## 🛠️ Tech Stack
 
@@ -47,88 +59,83 @@ Portfolio/
 
 ## 🚀 Quick Start
 
-```powershell
-# install dependencies
+```bash
+# Clone the repository
+git clone https://github.com/Mihiran-Thilakarathna/Mihiran-Portfolio.git
+cd Mihiran-Portfolio
+
+# Install dependencies
 npm install
 
-# run in development (opens Vite with HMR)
+# Run in development mode
 npm run dev
 
-
-# create an optimized production bundle
+# Build for production
 npm run build
 
-# preview the build locally
+# Preview production build
 npm run preview
 ```
 
-> **Requirements:** Node.js 18+ and npm (or another package manager such as pnpm/yarn).
+> **Requirements:** Node.js 18+ and npm (or pnpm/yarn)
 
 ## 📙 Available Scripts
 
 | Command | Description |
 | --- | --- |
-| `npm run dev` | Bootstraps the Vite development server with hot-module replacement. |
-| `npm run build` | Runs TypeScript project references and builds an optimized production bundle. |
-| `npm run preview` | Serves the contents of `dist/` locally for testing. |
-| `npm run lint` | Executes ESLint using the configuration in `eslint.config.js`. |
-## 🧩 Customization Guide
+| `npm run dev` | Start Vite dev server with HMR |
+| `npm run build` | Type-check and build for production |
+| `npm run preview` | Preview production build locally |
+| `npm run lint` | Run ESLint |
 
-- **Content**: Update personal details, experience, certifications, and multi-category projects in `src/data/portfolio.ts`.
-- **Branding**: Replace imagery under `src/assets/` and edit the favicon at `public/favicon.svg`.
-- **Themes**: Adjust the CSS variables defined in `src/index.css` to tweak colors, typography, and shadows.
-- **Animations**: Motion variants live alongside each component (e.g. `src/components/Hero.tsx`).
+## 🎨 Customization
 
-## 📦 Deployment Notes
+- **Content** — Edit `src/data/portfolio.ts` for personal info, projects, experience, and skills
+- **Branding** — Replace images in `src/assets/` and `public/favicon.svg`
+- **Themes** — Tune CSS variables in `src/index.css`
+- **Animations** — Adjust Framer Motion configs in component files
 
-- The build output in `dist/` is static—host it on services such as Netlify, Vercel, or GitHub Pages.
-- Review social/Open Graph metadata in `index.html` before publishing.
-- If you connect analytics for profile views, update `profileViews` and `profileViewsUpdatedAt` programmatically instead of editing data manually.
+## 📦 Deployment
 
-### Live Demo (GitHub Pages)
+This portfolio deploys automatically to GitHub Pages via GitHub Actions (`.github/workflows/deploy.yml`).
 
-- Push your repository to GitHub with a default branch named `main`.
-- This project includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that builds the site and publishes it to GitHub Pages automatically.
-- After the first successful run, your site will be available at:
-	- `https://<your-username>.github.io/<repository-name>/`
-- The Vite base path is set via `VITE_BASE_PATH` during CI so assets resolve correctly under the repository subpath.
+**Manual deployment options:**
+- **Netlify/Vercel** — Connect your repo for zero-config deploys
+- **GitHub Pages** — Ensure Settings → Pages is set to "GitHub Actions"
+
+Your live site: [mihiran-thilakarathna.github.io/Mihiran-Portfolio](https://mihiran-thilakarathna.github.io/Mihiran-Portfolio/)
 
 ## 📬 Contact
 
-- Email: `thmthilakarathna@gmail.com`
-- WhatsApp: `+94 76 045 3356`
-- LinkedIn: [linkedin.com/in/mihiran-thilakarathna-9478302a8](https://www.linkedin.com/in/mihiran-thilakarathna-9478302a8)
-- GitHub: [github.com/Mihiran-Thilakarathna](https://github.com/Mihiran-Thilakarathna)
-
-## ✅ Compatibility
-
-- ✅ Chrome (latest)
-- ✅ Firefox (latest)
-- ✅ Safari (latest)
-- ✅ Edge (latest)
-
-## 📱 Responsive Breakpoints
-
-- 📱 Mobile: < 640px
-- 📱 Tablet: 640px - 968px
-- 💻 Desktop: > 968px
+- **Email:** [thmthilakarathna@gmail.com](mailto:thmthilakarathna@gmail.com)
+- **WhatsApp:** [+94 76 045 3356](https://wa.me/94760453356)
+- **LinkedIn:** [Mihiran Thilakarathna](https://www.linkedin.com/in/mihiran-thilakarathna-9478302a8)
+- **GitHub:** [@Mihiran-Thilakarathna](https://github.com/Mihiran-Thilakarathna)
 
 ## 👤 Author
 
-**Mihiran Thilakarathna**
-- GitHub: https://github.com/Mihiran-Thilakarathna
-- LinkedIn: https://www.linkedin.com/in/mihiran-thilakarathna-9478302a8
+**Mihiran Thilakarathna**  
+IT Undergraduate | AI/ML Enthusiast | Full Stack Developer
+
+[![GitHub](https://img.shields.io/badge/GitHub-@Mihiran--Thilakarathna-181717?style=flat&logo=github)](https://github.com/Mihiran-Thilakarathna)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Mihiran_Thilakarathna-0077b5?style=flat&logo=linkedin)](https://www.linkedin.com/in/mihiran-thilakarathna-9478302a8)
 
 
 
 ## 📄 License
 
-This project is open-source under the MIT License. See `LICENSE` for details.
+This project is open-source under the [MIT License](LICENSE).
 
-## ⭐ Show Your Support
+## ⭐ Support
 
-Give a ⭐️ if you like this project!
+If this project helped you, please consider giving it a ⭐️!
 
 ---
 
-Made with ❤️ using React, TypeScript, and Vite
+<div align="center">
+
+**Made with ❤️ using React, TypeScript, and Vite**
+
+[View Live Demo →](https://mihiran-thilakarathna.github.io/Mihiran-Portfolio/)
+
+</div>
