@@ -1,6 +1,7 @@
 ﻿import type { Project, WorkExperience, Education, Certification, Skill } from '../types';
 
 // Import project images
+import portfolioImage from '../assets/portfolio.jpg';
 import aiChatImage from '../assets/AI-Chat-Assistant.jpg';
 import calculatorImage from '../assets/calculator.avif';
 import fioraEditorImage from '../assets/fiora editor.png';
@@ -147,6 +148,17 @@ export const certifications: Certification[] = [
 export const projects: Project[] = [
   {
     id: 1,
+    title: 'Personal Portfolio Website',
+    date: 'October 2025',
+    description: 'A modern, responsive portfolio showcasing AI/ML and software development projects. Features smooth animations with Framer Motion, theme switching (default/light/dark), multi-category project filtering, and automated GitHub Pages deployment.',
+    image: portfolioImage,
+    categories: ['Web Application'],
+    tags: ['React', 'TypeScript', 'Vite', 'Framer Motion', 'CSS Modules', 'GitHub Pages'],
+    liveUrl: 'https://mihiran-thilakarathna.github.io/Mihiran-Portfolio/',
+    codeUrl: 'https://github.com/Mihiran-Thilakarathna/Mihiran-Portfolio.git',
+  },
+  {
+    id: 2,
     title: 'AI Chat Assistant',
     date: 'October 2025',
     description: 'A modern Android chat app powered by Google Gemini AI, featuring real-time conversations and synced chat history using Firebase Firestore. Built with Jetpack Compose, Material Design 3, and MVVM architecture.',
@@ -157,7 +169,7 @@ export const projects: Project[] = [
     codeUrl: 'https://github.com/Mihiran-Thilakarathna/AI-Chat-Assistant.git',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Java Swing Calculator',
     date: 'September 2025',
     description: 'A simple yet stylish desktop calculator built with Java 17 and Swing. Supports basic arithmetic operations, percentage, square root, and sign toggle with a clean, fixed-size UI.',
@@ -168,7 +180,7 @@ export const projects: Project[] = [
     codeUrl: 'https://github.com/Mihiran-Thilakarathna/Calculator.git',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Fiora Video Editor',
     date: 'August 2025',
     description: 'A modern desktop video editor built for the ICT2210 Mini Project, featuring real-time preview, interactive timeline, trimming, light and color adjustments, and one-click filters with export support.',
@@ -179,7 +191,7 @@ export const projects: Project[] = [
     codeUrl: 'https://github.com/Mihiran-Thilakarathna/FioraVideoEditor.git',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Personal Organizer Application',
     date: 'July 2025',
     description: 'A Qt-based desktop application developed in C++ with SQLite integration. Helps users manage income, expenses, budgets, and academic schedules with modern UI and financial reports.',
@@ -190,7 +202,7 @@ export const projects: Project[] = [
     codeUrl: 'https://github.com/Mihiran-Thilakarathna/PersonalOrganizer.git',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Opal Muse Clothing Website',
     date: 'June 2025',
     description: 'A fully functional clothing shop website built with HTML, CSS, JavaScript, and PHP. Features user login, product listings, cart and checkout, and a responsive modern design with database integration.',
@@ -201,7 +213,7 @@ export const projects: Project[] = [
     codeUrl: 'https://github.com/Mihiran-Thilakarathna/OpalMuse-Web-site.git',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Mood Music App',
     date: 'In Development - 2025',
     description: 'A React Native mobile app that detects facial expressions in real-time to recommend personalized music playlists. Built with React Native, TypeScript, and Vision Camera, with AI emotion detection planned using TensorFlow.js.',
