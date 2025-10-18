@@ -206,8 +206,13 @@
 }
 
 @media (max-width: 768px) {
+  .projects {
+    padding: 4rem 1.5rem;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .filter-buttons {
@@ -216,6 +221,53 @@
 
   .filter-btn {
     padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects {
+    padding: 3rem 1rem;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  .project-content {
+    padding: 1.25rem;
+  }
+
+  .project-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-description {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-buttons {
+    gap: 0.4rem;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .project-image {
+    height: 180px;
+  }
+
+  .category-tag {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.7rem;
   }
 }

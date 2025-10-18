@@ -189,11 +189,193 @@
 }
 
 @media (max-width: 768px) {
+  .education {
+    padding: 5rem 1.5rem;
+  }
+
+  .education-section,
+  .certifications-section {
+    margin-bottom: 3rem;
+  }
+
+  .education-section h3,
+  .certifications-section h3 {
+    font-size: 1.7rem;
+  }
+
   .education-grid {
     grid-template-columns: 1fr;
   }
 
   .certifications-grid {
     grid-template-columns: 1fr;
+  }
+
+  .education-card {
+    min-height: 300px;
+    padding: 1.75rem;
+  }
+
+  .certification-card {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 640px) {
+  .education {
+    padding: 4rem 1rem;
+  }
+
+  .education-section,
+  .certifications-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .education-section h3,
+  .certifications-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .education-grid {
+    gap: 1.5rem;
+  }
+
+  .education-card {
+    min-height: 280px;
+    padding: 1.5rem;
+  }
+
+  .status-badge {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .edu-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.7rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .education-card h4 {
+    font-size: 1.1rem;
+  }
+
+  .degree {
+    font-size: 0.95rem;
+  }
+
+  .duration {
+    font-size: 0.8rem;
+  }
+
+  .certifications-grid {
+    gap: 1.2rem;
+  }
+
+  .certification-card {
+    min-height: 250px;
+    padding: 1.3rem;
+  }
+
+  .cert-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+
+  .certification-card h4 {
+    font-size: 0.95rem;
+    min-height: 35px;
+  }
+
+  .provider {
+    font-size: 0.8rem;
+  }
+
+  .date {
+    font-size: 0.75rem;
+  }
+
+  .view-certificate {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education {
+    padding: 3.5rem 0.75rem;
+  }
+
+  .education-section h3,
+  .certifications-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .education-card {
+    min-height: 260px;
+    padding: 1.25rem;
+  }
+
+  .status-badge {
+    padding: 0.25rem 0.7rem;
+    font-size: 0.65rem;
+  }
+
+  .edu-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .education-card h4 {
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .degree {
+    font-size: 0.9rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .duration {
+    font-size: 0.75rem;
+  }
+
+  .certification-card {
+    min-height: 240px;
+    padding: 1.2rem;
+  }
+
+  .cert-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .certification-card h4 {
+    font-size: 0.9rem;
+    min-height: 30px;
+    margin-bottom: 0.4rem;
+  }
+
+  .provider {
+    font-size: 0.75rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .date {
+    font-size: 0.7rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .view-certificate {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.7rem;
   }
 }

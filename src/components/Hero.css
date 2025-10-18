@@ -198,9 +198,13 @@
 }
 
 @media (max-width: 968px) {
+  .hero {
+    padding: 6rem 1.5rem 3rem;
+  }
+
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
     text-align: center;
   }
 
@@ -222,6 +226,7 @@
 
   .bio {
     margin: 0 auto 2rem;
+    font-size: 0.95rem;
   }
 
   .hero-buttons {
@@ -236,5 +241,77 @@
   .image-wrapper {
     width: 280px;
     height: 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 5rem 1rem 2rem;
+    min-height: auto;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    min-height: 2rem;
+  }
+
+  .greeting {
+    font-size: 0.8rem;
+  }
+
+  .bio {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .image-container {
+    width: 250px;
+    height: 250px;
+  }
+
+  .image-wrapper {
+    width: 230px;
+    height: 230px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 4.5rem 0.75rem 1.5rem;
+  }
+
+  .name {
+    font-size: 1.75rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .bio {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .image-container {
+    width: 220px;
+    height: 220px;
+  }
+
+  .image-wrapper {
+    width: 200px;
+    height: 200px;
   }
 }

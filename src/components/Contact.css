@@ -220,6 +220,10 @@
 }
 
 @media (max-width: 968px) {
+  .contact {
+    padding: 4rem 1.5rem;
+  }
+
   .contact-content {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -228,5 +232,55 @@
   .contact-info,
   .contact-form-wrapper {
     padding: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact {
+    padding: 3rem 1rem;
+  }
+
+  .contact-info,
+  .contact-form-wrapper {
+    padding: 1.5rem;
+  }
+
+  .contact-method {
+    padding: 1rem;
+  }
+
+  .method-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+
+  .method-info h4 {
+    font-size: 0.95rem;
+  }
+
+  .method-info p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .contact-info h3,
+  .contact-form-wrapper h3 {
+    font-size: 1.3rem;
+  }
+
+  .contact-method {
+    padding: 0.85rem;
+  }
+
+  .method-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
   }
 }
