@@ -33,15 +33,18 @@
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   text-align: center;
   display: flex;
   flex-direction: column;
   min-height: 320px;
+  border: 2px solid transparent;
 }
 
 .education-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+  border-color: #6366f1;
 }
 
 .status-badge {
@@ -76,6 +79,12 @@
   color: white;
   font-size: 1.9rem;
   margin: 0 auto 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover .edu-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
 }
 
 .education-card h4 {
@@ -136,6 +145,12 @@
   color: #6366f1;
   font-size: 1.4rem;
   margin: 0 auto 1rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.certification-card:hover .cert-icon {
+  transform: scale(1.15) rotate(-5deg);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
 }
 
 .certification-card h4 {

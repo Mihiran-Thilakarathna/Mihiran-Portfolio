@@ -27,8 +27,8 @@ export const personalInfo = {
   instagram: '#',
   medium: '#',
   footerBio: 'Building intelligent solutions with AI, ML, and modern web technologies.',
-  profileViews: 1250,
-  profileViewsUpdatedAt: '2025-10-19T00:00:00+05:30',
+  profileViews: 0,
+  profileViewsUpdatedAt: '2025-10-19T06:00:00+05:30',
 };
 
 export const skills: Skill[] = [
