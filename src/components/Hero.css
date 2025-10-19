@@ -190,11 +190,25 @@
   font-weight: 600;
   font-size: 0.8rem;
   letter-spacing: 1px;
+  z-index: 10;
 }
 
 .scroll-indicator svg {
   margin-top: 0.5rem;
   font-size: 1.4rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
 }
 
 @media (max-width: 968px) {
@@ -246,7 +260,7 @@
 
 @media (max-width: 640px) {
   .hero {
-    padding: 5rem 1rem 2rem;
+    padding: 5rem 1rem 4rem;
     min-height: auto;
   }
 
@@ -281,11 +295,15 @@
     width: 230px;
     height: 230px;
   }
+
+  .scroll-indicator {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
   .hero {
-    padding: 4.5rem 0.75rem 1.5rem;
+    padding: 4.5rem 0.75rem 3rem;
   }
 
   .name {
@@ -313,5 +331,9 @@
   .image-wrapper {
     width: 200px;
     height: 200px;
+  }
+
+  .scroll-indicator {
+    display: none;
   }
 }
