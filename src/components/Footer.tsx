@@ -7,6 +7,7 @@ import {
 } from 'react-icons/fa';
 import { useTheme } from '../contexts/ThemeContext';
 import { useScrollToTop } from '../hooks/useScrollToTop';
+import { useProfileViews } from '../hooks/useProfileViews';
 import { personalInfo } from '../data/portfolio';
 import './Footer.css';
 
@@ -31,24 +32,9 @@ const resolveExternalUrl = (value: string | undefined, fallback: string) => {
 const Footer: React.FC = () => {
   const { theme, setTheme } = useTheme();
   const { showButton, scrollToTop } = useScrollToTop();
-
-  const views = personalInfo.profileViews;
-  const formattedLastUpdated = React.useMemo(() => {
-    if (!personalInfo.profileViewsUpdatedAt) {
-      return null;
-    }
-
-    const parsedDate = new Date(personalInfo.profileViewsUpdatedAt);
-
-    if (Number.isNaN(parsedDate.getTime())) {
-      return personalInfo.profileViewsUpdatedAt;
-    }
-
-    return parsedDate.toLocaleString(undefined, {
-      dateStyle: 'medium',
-      timeStyle: 'short',
-    });
-  }, [personalInfo.profileViewsUpdatedAt]);
+  
+  // Use the profile views hook to track and display views
+  const { views, lastUpdated } = useProfileViews(personalInfo.profileViews);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -75,8 +61,8 @@ const Footer: React.FC = () => {
                     ? `${views.toLocaleString()} Profile Views`
                     : 'Profile views data not available'}
                 </span>
-                {formattedLastUpdated && (
-                  <small>Updated {formattedLastUpdated}</small>
+                {lastUpdated && (
+                  <small>Updated {lastUpdated}</small>
                 )}
               </div>
             </div>
