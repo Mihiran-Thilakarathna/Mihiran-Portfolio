@@ -97,10 +97,7 @@ npm run preview
 This portfolio deploys automatically to GitHub Pages via GitHub Actions (`.github/workflows/deploy.yml`).
 
 **Manual deployment options:**
-- **Netlify/Vercel** — Connect your repo for zero-config deploys
 - **GitHub Pages** — Ensure Settings → Pages is set to "GitHub Actions"
-
-Your live site: [mihiran-thilakarathna.github.io/Mihiran-Portfolio](https://mihiran-thilakarathna.github.io/Mihiran-Portfolio/)
 
 ## 📬 Contact
 
@@ -133,6 +130,5 @@ If this project helped you, please consider giving it a ⭐️!
 
 **Made with ❤️ using React, TypeScript, and Vite**
 
-[View Live Demo →](https://mihiran-thilakarathna.github.io/Mihiran-Portfolio/)
 
 </div>
