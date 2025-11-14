@@ -57,16 +57,7 @@ export const stats = {
 };
 
 export const workExperience: WorkExperience[] = [
-  {
-    id: 1,
-    company: 'Nena Sewana Educational Institute',
-    role: 'O/L ICT Tutor',
-    startDate: 'Jan 2024',
-    endDate: 'Aug 2024',
-    location: 'Gethetta,Sri Lanka',
-    description: 'Taught ICT fundamentals to O/L students, covering computer basics, programming concepts, and digital literacy. Developed engaging lesson plans and practical exercises to help students understand technology and prepare for their examinations. Mentored students in problem-solving and computational thinking.',
-    current: false,
-  },
+
   {
     id: 2,
     company: 'Peoples Bank',
@@ -109,35 +100,62 @@ export const education: Education[] = [
 
 export const certifications: Certification[] = [
   {
-    id: 1,
-    title: ' Google AI Essentials',
-    provider: 'Coursera',
-    date: 'Sep 2025',
-    certificateUrl: 'https://www.coursera.org/account/accomplishments/verify/0DVLMU9D8SU9',
+  id: 1,
+  title: 'Google AI Essential Specialization',
+  provider: 'Coursera',
+  date: 'Nov 2025',
+  certificateUrl: 'https://www.coursera.org/account/accomplishments/specialization/F5EEQMFC08S1',
   },
+
   {
-    id: 2,
+  id: 2,
+  title: 'Designing Blockchain Solutions Using Amazon Managed Blockchain',
+  provider: 'AWS Skill Builder',
+  date: 'Nov 2025',
+  certificateUrl: 'https://skillbuilder.aws/learn/7YE74951Z4/designing-blockchain-solutions-using-amazon-managed-blockchain/V483HBRCSJ',
+  },
+
+  {
+  id: 3,
+  title: 'Gemini Certified University Student',
+  provider: 'Google',
+  date: 'Nov 2025',
+  certificateUrl: 'https://edu.google.accredible.com/4077cb29-febf-49e9-8cc9-36f6d0dba1d3#acc.yKnY8v2x',
+  },
+
+  {
+  id: 4,
+  title: 'Postman API Fundamentals Student Expert',
+  provider: 'Postman',
+  date: 'Nov 2025',
+  certificateUrl: 'https://badges.parchment.com/public/assertions/bOBqRDENSP-V6Q-cq2teMQ?identity__email=thmthilakarathna2%40gmail.com',
+  },
+
+
+  {
+    id: 5,
     title: 'AI Security & Governance',
     provider: 'Securiti',
     date: 'Sep 2025',
     certificateUrl: 'https://education.securiti.ai/verification/13EF93075-13EF92EE4-1336A0CFD/',
   },
+
   {
-    id: 3,
+    id: 6,
     title: 'ReactJs - The Complete ReactJs Course For Beginners',
     provider: 'Udemy',
     date: 'Jun 2025',
     certificateUrl: 'https://www.udemy.com/certificate/UC-fb6ef630-23d6-49ca-8cbc-4bb09ba407b8/',
   },
   {
-    id: 4,
+    id: 7,
     title: 'SQL (Intermediate) Certificate',
     provider: 'HackerRank',
     date: 'Aug 2024',
     certificateUrl: 'https://www.hackerrank.com/certificates/a193c5d67ada',
   },
   {
-    id: 5,
+    id: 8,
     title: 'Mastering C & C++ Programming: From Fundamentals to Advanced',
     provider: 'Udemy',
     date: 'Jun 2024',

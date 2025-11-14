@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import { FaDownload, FaArrowDown } from 'react-icons/fa';
+import { FaDownload } from 'react-icons/fa';
 import { personalInfo } from '../data/portfolio';
 import mihiranPhoto from '../assets/mihiran1.png';
 import './Hero.css';
@@ -100,13 +100,12 @@ const Hero: React.FC = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
       >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        >
-          <p>SCROLL DOWN</p>
-          <FaArrowDown />
-        </motion.div>
+        <div className="scroll-button">
+          <div className="scroll-mouse">
+            <div className="scroll-wheel"></div>
+          </div>
+          <p className="scroll-text">SCROLL DOWN</p>
+        </div>
       </motion.div>
     </section>
   );

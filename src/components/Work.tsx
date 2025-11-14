@@ -1,21 +1,24 @@
 import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FaBriefcase, FaMapMarkerAlt, FaCalendarAlt, FaArrowRight, FaTimes } from 'react-icons/fa';
+import { FaBriefcase, FaMapMarkerAlt, FaCalendarAlt, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { workExperience } from '../data/portfolio';
 import './Work.css';
 
 const Work: React.FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const [expandedCard, setExpandedCard] = useState<number | null>(null);
+  const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set());
 
   const toggleCard = (id: number) => {
-    setExpandedCard(expandedCard === id ? null : id);
-  };
-
-  const truncateText = (text: string, maxLength: number = 120) => {
-    if (text.length <= maxLength) return text;
-    return text.substring(0, maxLength) + '...';
+    setExpandedCards(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(id)) {
+        newSet.delete(id);
+      } else {
+        newSet.add(id);
+      }
+      return newSet;
+    });
   };
 
   return (
@@ -31,17 +34,18 @@ const Work: React.FC = () => {
           <p>My professional journey and key contributions</p>
         </motion.div>
 
-        <div className="work-timeline">
+        <div className="work-grid">
           {workExperience.map((work, index) => (
             <motion.div
               key={work.id}
               className="work-card"
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
             >
-              {work.current && <span className="badge current">CURRENT</span>}
-              {!work.current && <span className="badge past">PAST</span>}
+              <span className={`status-badge ${work.current ? 'current' : 'past'}`}>
+                {work.current ? 'CURRENT' : 'PAST'}
+              </span>
               
               <div className="work-icon">
                 <FaBriefcase />
@@ -61,18 +65,18 @@ const Work: React.FC = () => {
                 </div>
               </div>
 
-              <p className={`work-description ${expandedCard === work.id ? 'expanded' : 'truncated'}`}>
-                {expandedCard === work.id ? work.description : truncateText(work.description)}
+              <p className={`work-description ${expandedCards.has(work.id) ? 'expanded' : 'collapsed'}`}>
+                {work.description}
               </p>
 
               <button 
-                className="view-details"
+                className="show-more-btn"
                 onClick={() => toggleCard(work.id)}
               >
-                {expandedCard === work.id ? (
-                  <>Show Less <FaTimes /></>
+                {expandedCards.has(work.id) ? (
+                  <>Show Less <FaChevronUp /></>
                 ) : (
-                  <>View Details <FaArrowRight /></>
+                  <>Show More <FaChevronDown /></>
                 )}
               </button>
             </motion.div>

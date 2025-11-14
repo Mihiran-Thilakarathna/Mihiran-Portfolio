@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
         <div className="footer-content">
           {/* Column 1: About */}
           <div className="footer-column">
-            <h3 className="footer-logo">Portfolio.Me</h3>
+            <h3 className="footer-logo">Mihiran's Portfolio</h3>
             <p className="footer-bio">
               {personalInfo.footerBio || 'Building intelligent solutions with AI, ML, and modern web technologies.'}
             </p>
@@ -186,7 +186,7 @@ const Footer: React.FC = () => {
 
         {/* Copyright */}
         <div className="footer-bottom">
-          <p>© 2025 Mihiran Thilakarathna. Made with ❤️ using React.</p>
+          <p>© 2025 Mihiran Thilakarathna. All Rights Reserved😎</p>
         </div>
       </div>
 

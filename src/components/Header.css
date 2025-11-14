@@ -44,16 +44,15 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
+  gap: 0.6rem;
+  padding: 0.75rem 1.6rem;
   border: none;
   background: transparent;
   color: var(--text-color);
   border-radius: 50px;
   cursor: pointer;
-  /* increased by ~1pt */
-  font-size: 0.93rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   transition: all 0.3s ease;
   position: relative;
   white-space: nowrap;
@@ -73,7 +72,7 @@
 }
 
 .nav-icon {
-  font-size: 1rem;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,9 +98,9 @@
   }
 
   .nav-item {
-    padding: 0.55rem 0.9rem;
-    /* increased by ~1pt */
-    font-size: 0.83rem;
+    padding: 0.65rem 1.1rem;
+    font-size: 0.92rem;
+    border-radius: 45px;
   }
 
   .nav-label {
@@ -109,7 +108,7 @@
   }
 
   .nav-icon {
-    font-size: 1.18rem; /* +~1pt */
+    font-size: 1.25rem;
   }
 }
 
@@ -131,12 +130,13 @@
   }
 
   .nav-item {
-    padding: 0.5rem 0.8rem;
-    font-size: 0.8rem;
+    padding: 0.55rem 0.9rem;
+    font-size: 0.85rem;
+    border-radius: 40px;
   }
 
   .nav-icon {
-    font-size: 1.1rem;
+    font-size: 1.18rem;
   }
 }
 
@@ -158,11 +158,11 @@
   }
 
   .nav-item {
-    padding: 0.45rem 0.7rem;
-    font-size: 0.75rem;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
   }
 
   .nav-icon {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }

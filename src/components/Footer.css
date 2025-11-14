@@ -1,6 +1,7 @@
 .footer {
   background: var(--card-bg);
   padding: 4rem 2rem 2rem;
+  padding-right: 8rem;
   border-top: 1px solid rgba(99, 102, 241, 0.1);
   position: relative;
 }
@@ -205,8 +206,8 @@
 
 .back-to-top {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 6.5rem;
+  right: 1.5rem;
   width: 55px;
   height: 55px;
   background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
@@ -216,15 +217,22 @@
   font-size: 1.4rem;
   cursor: pointer;
   box-shadow: 0 5px 20px rgba(99, 102, 241, 0.4);
-  z-index: 999;
+  z-index: 998;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
 }
 
 @media (max-width: 968px) {
   .footer {
     padding: 3.5rem 1.5rem 1.5rem;
+    padding-right: 7rem;
   }
 
   .footer-content {
@@ -262,12 +270,15 @@
     width: 50px;
     height: 50px;
     font-size: 1.2rem;
+    bottom: 6rem;
+    right: 1rem;
   }
 }
 
 @media (max-width: 640px) {
   .footer {
     padding: 3rem 1rem 1.2rem;
+    padding-right: 6.5rem;
   }
 
   .footer-content {
@@ -341,7 +352,7 @@
   }
 
   .back-to-top {
-    bottom: 1rem;
+    bottom: 5.5rem;
     right: 1rem;
     width: 45px;
     height: 45px;
@@ -352,6 +363,7 @@
 @media (max-width: 480px) {
   .footer {
     padding: 2.5rem 0.75rem 1rem;
+    padding-right: 6rem;
   }
 
   .footer-content {
@@ -420,7 +432,7 @@
     width: 42px;
     height: 42px;
     font-size: 1rem;
-    bottom: 0.8rem;
+    bottom: 5.2rem;
     right: 0.8rem;
   }
 }

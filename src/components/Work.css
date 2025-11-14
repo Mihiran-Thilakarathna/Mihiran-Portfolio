@@ -1,6 +1,6 @@
 .work {
   padding: 6rem 2rem;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.03) 0%, rgba(139, 92, 246, 0.03) 100%);
+  background: var(--bg-color);
 }
 
 .work-container {
@@ -8,11 +8,17 @@
   margin: 0 auto;
 }
 
-.work-timeline {
+.work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
+  justify-items: center;
+}
+
+.work-grid:has(.work-card:only-child) {
+  grid-template-columns: minmax(300px, 400px);
+  justify-content: center;
 }
 
 .work-card {
@@ -21,21 +27,24 @@
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  min-height: 450px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  text-align: center;
   display: flex;
   flex-direction: column;
+  min-height: 320px;
+  border: 2px solid transparent;
 }
 
 .work-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+  border-color: #6366f1;
 }
 
-.badge {
+.status-badge {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 1rem;
+  right: 1rem;
   padding: 0.4rem 1rem;
   border-radius: 20px;
   font-size: 0.75rem;
@@ -43,40 +52,47 @@
   letter-spacing: 1px;
 }
 
-.badge.current {
+.status-badge.current {
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: white;
 }
 
-.badge.past {
+.status-badge.past {
   background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
   color: white;
 }
 
 .work-icon {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-  border-radius: 15px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 1.7rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.9rem;
+  margin: 0 auto 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-card:hover .work-icon {
+  transform: scale(1.15) rotate(360deg);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
 }
 
 .work-card h3 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--text-color);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
 }
 
 .work-card h4 {
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1rem;
   color: #6366f1;
+  font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
@@ -84,7 +100,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
+  align-items: center;
 }
 
 .detail {
@@ -103,12 +120,14 @@
 .work-description {
   color: var(--text-secondary);
   line-height: 1.7;
-  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
   flex-grow: 1;
-  transition: max-height 0.3s ease;
+  text-align: justify;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
 }
 
-.work-description.truncated {
+.work-description.collapsed {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   line-clamp: 3;
@@ -121,26 +140,33 @@
   display: block;
 }
 
-.view-details {
+.show-more-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.7rem 1.5rem;
+  padding: 0.6rem 1.5rem;
   background: transparent;
   border: 2px solid #6366f1;
   border-radius: 50px;
   color: #6366f1;
   font-weight: 600;
+  font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.3s ease;
   align-self: center;
   margin-top: auto;
 }
 
-.view-details:hover {
+.show-more-btn:hover {
   background: #6366f1;
   color: white;
-  transform: translateX(5px);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+}
+
+.show-more-btn svg {
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -148,14 +174,51 @@
     padding: 5rem 1.5rem;
   }
 
-  .work-timeline {
-    grid-template-columns: 1fr;
+  .work-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.5rem;
   }
 
   .work-card {
-    min-height: 400px;
+    min-height: 360px;
     padding: 1.75rem;
+  }
+
+  .work-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.7rem;
+  }
+
+  .work-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .work-card h4 {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .work {
+    padding: 4rem 1rem;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+    margin-top: 2.5rem;
+  }
+
+  .work-card {
+    min-height: 340px;
+    padding: 1.5rem;
+  }
+
+  .status-badge {
+    top: 1rem;
+    right: 1rem;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.7rem;
   }
 
   .work-icon {
@@ -165,33 +228,26 @@
   }
 
   .work-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.05rem;
   }
 
   .work-card h4 {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .work-description {
+    font-size: 0.85rem;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .work {
-    padding: 4rem 1rem;
-  }
-
-  .work-timeline {
-    margin-top: 2.5rem;
+    padding: 3.5rem 0.75rem;
   }
 
   .work-card {
-    min-height: 380px;
-    padding: 1.5rem;
-  }
-
-  .badge {
-    top: 1rem;
-    right: 1rem;
-    padding: 0.3rem 0.8rem;
-    font-size: 0.7rem;
+    min-height: 320px;
+    padding: 1.3rem;
   }
 
   .work-icon {
@@ -202,12 +258,11 @@
   }
 
   .work-card h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .work-card h4 {
-    font-size: 0.95rem;
-    margin-bottom: 1.2rem;
+    font-size: 0.85rem;
   }
 
   .detail {
@@ -215,68 +270,12 @@
   }
 
   .work-description {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 1.6;
   }
 
-  .view-details {
-    padding: 0.6rem 1.3rem;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .work {
-    padding: 3.5rem 0.75rem;
-  }
-
-  .work-card {
-    min-height: 360px;
-    padding: 1.25rem;
-  }
-
-  .badge {
-    padding: 0.25rem 0.7rem;
-    font-size: 0.65rem;
-  }
-
-  .work-icon {
-    width: 45px;
-    height: 45px;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-
-  .work-card h3 {
-    font-size: 1.1rem;
-  }
-
-  .work-card h4 {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-  }
-
-  .work-details {
-    gap: 0.6rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .detail {
-    font-size: 0.75rem;
-  }
-
-  .detail svg {
+  .show-more-btn {
+    padding: 0.5rem 1.2rem;
     font-size: 0.8rem;
-  }
-
-  .work-description {
-    font-size: 0.85rem;
-    line-height: 1.5;
-    margin-bottom: 1.2rem;
-  }
-
-  .view-details {
-    padding: 0.5rem 1.1rem;
-    font-size: 0.85rem;
   }
 }
